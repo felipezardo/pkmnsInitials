@@ -1,4 +1,5 @@
 import { useState } from "react";
+import { useNavigate } from "react-router-dom";
 import * as S from "./style";
 
 import Pokebola from "../../assets/images/pokeball.png"
@@ -11,10 +12,18 @@ export default function Kanto() {
 
     const [pokemon, setPokemon] = useState(Pokebola); // Inicialmente mostra a Pokébola
 
+    const navigate = useNavigate(); // Hook para navegação
+
     // Função para alterar o Pokémon
     const escolhoVoce = (pokemon) => {
       setPokemon(pokemon);
     };
+
+     // Função para redirecionar para a página de batalha
+  const iniciarBatalha = () => {
+    navigate("/batalha");
+  };
+
   return (
     <S.Kanto>
         <S.Iniciais>
@@ -31,6 +40,11 @@ export default function Kanto() {
 
             </S.Tipos>
             
+            {/* Mostrar o botão "Batalhar!" somente se um Pokémon for selecionado */}
+        {pokemon !== Pokebola && (
+          <button onClick={iniciarBatalha}>Batalhar!</button>
+        )}
+
         </S.Iniciais>
       
     </S.Kanto>
