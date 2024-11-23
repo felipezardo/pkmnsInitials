@@ -1,4 +1,6 @@
 import * as S from "./style";
+import { Link } from "react-router-dom";
+import { useState } from "react";
 
 export default function Header(){
 
@@ -7,9 +9,9 @@ export default function Header(){
         <S.Header>
             <nav>
                 <ul>
-                    <li><a href="">Kanto</a></li>
-                    <li><a href="">Johto</a></li>
-                    <li><a href="">Hoenn</a></li>
+                    <li><Link to="/">Kanto</Link></li>
+                    <li className="meio"><Link to="/Johto">Johto</Link></li>
+                    <li><Link to="/Hoenn">Hoenn</Link></li>
                 </ul>
             </nav>
         </S.Header>

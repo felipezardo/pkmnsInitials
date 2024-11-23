@@ -1,5 +1,8 @@
+import {BrowserRouter, Routes, Route} from "react-router-dom"
 import Header from "./Components/Header/Header";
 import Kanto from "./Components/Kanto/Kanto"
+import Johto from "./Components/Johto/Johto";
+import  Hoenn  from "./Components/Hoenn/Hoenn";
 import styled, { createGlobalStyle } from "styled-components";
 
 
@@ -18,8 +21,16 @@ export default function App() {
   return(
     <>
      <GlobalStyle />
-    <Header />
-    <Kanto />
+     <BrowserRouter>
+     <Header />
+     <Routes>
+      <Route path="/" element={<Kanto/>}/>
+      <Route path="/Johto" element={<Johto/>}/>
+      <Route path="/Hoenn" element={<Hoenn/>}/>
+    </Routes>
+     </BrowserRouter>
+    
+   
     </>
   )
 
