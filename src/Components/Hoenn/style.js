@@ -3,7 +3,7 @@ import Fundo from "../../assets/images/fundo.png"
 
 export const Hoenn = styled.section`
  
-  display: flex;
+ display: flex;
   justify-content: center;
   align-items: center;
   height: 90vh;
@@ -20,7 +20,7 @@ export const Iniciais = styled.div`
   flex-direction: column;
   text-align: center;
   padding: 1em;
-  height: 60vh;
+  height: 67vh;
   width: 60vh;
   background-color: white;
   border-radius: 2em;
@@ -52,6 +52,7 @@ justify-content: space-around;
     color: white;
     border-radius: 5px;
     font-family: "Roboto Mono", monospace;
+    font-size:1.2rem;
     cursor: pointer;
 
 }
@@ -63,6 +64,7 @@ justify-content: space-around;
     color: white;
     border-radius: 5px;
     font-family: "Roboto Mono", monospace;
+    font-size:1.2rem;
     cursor: pointer;
 }
 
@@ -73,7 +75,25 @@ justify-content: space-around;
     color: white;
     border-radius: 5px;
     font-family: "Roboto Mono", monospace;
+    font-size:1.2rem;
     cursor: pointer;
+}
+
+`;
+
+export const Batalhar = styled.button`
+margin: 1em;
+background-color: #EE2D2D;
+color: aliceblue;
+font-size: 1.8rem;
+letter-spacing: 2px;
+padding: 0.2em;
+border-radius: 10px;
+border: none;
+cursor: pointer;
+font-family: "Roboto Mono", monospace;
+&:hover{
+  background-color: #C00B0B;
 }
 
 `;

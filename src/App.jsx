@@ -1,11 +1,11 @@
-import {BrowserRouter, Routes, Route,useLocation } from "react-router-dom"
+import { BrowserRouter, Routes, Route, useLocation } from "react-router-dom";
 import Header from "./Components/Header/Header";
-import Kanto from "./Components/Kanto/Kanto"
+import Kanto from "./Components/Kanto/Kanto";
 import Johto from "./Components/Johto/Johto";
-import  Hoenn  from "./Components/Hoenn/Hoenn";
+import Hoenn from "./Components/Hoenn/Hoenn";
 import Batalha from "./Components/Batalha/Batalha";
+import { PokemonProvider } from "./Components/PokemonContext";
 import styled, { createGlobalStyle } from "styled-components";
-
 
 const GlobalStyle = createGlobalStyle`
   * {
@@ -16,7 +16,6 @@ const GlobalStyle = createGlobalStyle`
   
 
   `;
-
 
 function Layout() {
   const location = useLocation(); // hook para pegar a rota atual, precisa estar fora do App e dentro de um componente filho
@@ -35,24 +34,15 @@ function Layout() {
   );
 }
 
-
-
-
-
 export default function App() {
-
- 
-
-  return(
+  return (
     <>
-     <GlobalStyle />
-     <BrowserRouter>
-      <Layout /> {/* Envolvemos tudo dentro do Layout */}
-     </BrowserRouter>
-    
-   
+      <GlobalStyle />
+      <BrowserRouter>
+        <PokemonProvider>
+          <Layout /> {/* Envolvemos tudo dentro do Layout */}
+        </PokemonProvider>
+      </BrowserRouter>
     </>
-  )
-
+  );
 }
-
