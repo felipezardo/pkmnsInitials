@@ -42,7 +42,8 @@ export default function Kanto() {
             
             {/* Mostrar o botão "Batalhar!" somente se um Pokémon for selecionado */}
         {pokemon !== Pokebola && (
-          <button onClick={iniciarBatalha}>Batalhar!</button>
+          
+          <S.Batalhar onClick={iniciarBatalha}>Batalhar!</S.Batalhar>
         )}
 
         </S.Iniciais>
