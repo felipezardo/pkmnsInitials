@@ -11,7 +11,7 @@ export const batalhaPokemon = styled.section`
 export const Gba = styled.div`
   border-radius: 25px;
   padding: 15px;
-  box-shadow: rgba(50, 50, 93, 0.25) 0px 50px 100px -20px, rgba(0, 0, 0, 0.3) 0px 30px 60px -30px, rgba(10, 37, 64, 0.35) 0px -2px 6px 0px inset;
+ 
   width: 50vw;
   height: 65vh;
   display: flex;
@@ -20,14 +20,14 @@ export const Gba = styled.div`
 
 export const Luta = styled.div`
   height: 40vh;
-  box-shadow: rgba(3, 102, 214, 0.3) 0px 0px 0px 3px;
+  
   border-radius: 15px;
   display: flex;
   justify-content: space-between;
   padding: 5em;
   margin: 8px;
   img{
-    height: 20vh;
+   height:15vh;
   }
 
 `;
@@ -71,12 +71,14 @@ export const Descricao = styled.div`
 
 export const Moves = styled.div`
   
-  height: 16vh;
+  height: 10vh;
   display: flex;
   flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
 
   button {
-    width: 294px;
-    height: 4.5rem;
+    width: 13rem;
+    height: 3rem;
   }
 `;
